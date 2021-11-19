@@ -1,6 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -391,6 +392,7 @@ template {
 }
 
 .search__input {
+  outline: none;
   width: 350px;
   height: 100%;
   padding-left: 23px;
@@ -398,7 +400,6 @@ template {
   background-color: #f5fafe;
   border: none;
   font-size: 12px;
-  line-height: 15px;
   color: #333333;
 }
 
@@ -434,6 +435,5 @@ template {
   margin-left: 18px;
   color: #333333;
   font-size: 14px;
-  line-height: 18px;
 }
 /*# sourceMappingURL=style.css.map */
