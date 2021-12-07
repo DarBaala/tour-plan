@@ -31,11 +31,43 @@
     &-down
       &__button
         margin-left: 119px
+  .footer
+    &__input
+      flex-basis: 100%        
 
 @media  ( max-width: 992px)
   .container, 
   .newsletter-wrapper
     max-width: 700px
+  .footer
+    &__input
+      flex-basis: 49%
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-row-gap: 40px
+    &__logo
+      width: 134px
+      grid-row: 1 / 2
+      grid-column: span 2
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+    &__legal
+      grid-column: span 2  
+    &__additional
+      grid-column: span 2  
+    &__contact
+      &-details
+        grid-row: 3
+        grid-column: span 5 
+      &-form
+        grid-column: span 5
+        grid-row: 4          
   .packages
     &-layout
       min-width: 700px
@@ -95,6 +127,9 @@
   .container
     max-width: 576px
     width: 92%
+  .footer
+    &__input
+      flex-basis: 100%  
   .packages
     &-layout
       min-width: 500px
@@ -187,6 +222,38 @@
 @media ( max-width: 576px)
   .container
     max-width: 92%
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+    &__title
+      &--inline
+        margin-right: 10px  
+    &__logo
+      grid-row: 1
+      grid-column: 1 
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__categories
+      grid-row: 4
+      grid-column: 1
+    &__legal
+      grid-row: 5
+      grid-column: 1  
+    &__additional
+      grid-row: 3
+      grid-column: 1  
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__message
+      width: 270px         
+
   .hotels
     &-up
       &__image
