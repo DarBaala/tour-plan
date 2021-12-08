@@ -1134,6 +1134,7 @@ template {
   border: none;
   background-color: #EC1F46;
   color: #fff;
+  cursor: pointer;
 }
 
 .reviews {
@@ -1549,6 +1550,7 @@ template {
   color: #fff;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
