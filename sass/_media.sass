@@ -127,6 +127,8 @@
   .container
     max-width: 576px
     width: 92%
+  body
+    padding-top: 78px  
   .footer
     &__input
       flex-basis: 100%  
@@ -142,8 +144,53 @@
         padding: 11px 14px
         margin-left: 100px          
   .navbar
-    &__search, &-menu, &__user
+    &__user
+      flex-direction: column
+      justify-content: center
+    &-bottom
       display: none
+      &--visible        
+        display: block
+    &-bottom
+      position: fixed
+      left: 0
+      bottom: 0
+      right: 0
+      top: 78px
+      padding-top: 30px      
+    &__mobile
+      &--fixed
+        position: fixed
+        left: 0
+        right: 0
+        top: 0
+        z-index: 99
+    &__search, &__user
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex  
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &--mobile
+          &--visible
+            display: block
+  .search
+    &__input
+      width: 245px          
+  .user
+    &__avatar
+      &--mobile
+        margin-bottom: 10px
+    &__name
+      &--light
+        color: $light
+        margin-left: 0px
+        margin-bottom: 7px
+
   .menu
     &-button
       display: flex
@@ -230,7 +277,7 @@
         margin-right: 10px  
     &__logo
       grid-row: 1
-      grid-column: 1 
+      grid-column: 1
     &__social
       &-network
         grid-row: 2
@@ -252,7 +299,8 @@
         grid-row: 7
         grid-column: 1
     &__message
-      width: 270px         
+      width: 270px
+
 
   .hotels
     &-up
