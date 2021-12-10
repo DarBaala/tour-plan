@@ -71,25 +71,17 @@
     &--mb-2
       margin-bottom: 20px
   &__input
-    background-color: #fff
-    border-radius: 4px
-    border: none
-    padding: 0 23px
-    height: 50px
     margin-bottom: 15px
     flex-basis: 48%
     outline: none
   &__message
     width: 539px
     height: 123px
-    resize: none
-    outline: none
-    background-color: #fff
-    border-radius: 4px
-    padding: 18px 23px
     border: none
     flex-basis: 100%
     margin-bottom: 23px
+    &::placeholder
+      color: #BDBDBD 
   &__info
     color: #E0E0E0
     font-style: normal
@@ -97,15 +89,3 @@
     font-size: 12px
     line-height: 15px
   &__button
-    min-width: 160px
-    min-height: 50px
-    padding: 18px
-    font-style: normal
-    font-weight: bold
-    font-size: 12px
-    line-height: 15px
-    background-color: $primary
-    color: $light        
-    border: none
-    border-radius: 4px
-    cursor: pointer

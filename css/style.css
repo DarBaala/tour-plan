@@ -20,6 +20,76 @@ img {
   max-width: 100%;
 }
 
+.input {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px;
+  height: 50px;
+  outline: none;
+  border: none;
+}
+
+.input::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.input::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.input::placeholder {
+  color: #BDBDBD;
+}
+
+.message {
+  border: none;
+  resize: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 18px 23px;
+}
+
+.message::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.message:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.message::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.message::placeholder {
+  color: #BDBDBD;
+}
+
+.button {
+  min-width: 160px;
+  min-height: 50px;
+  padding: 18px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: #EC1F46;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.invalid {
+  color: #EC1F46;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -789,6 +859,7 @@ template {
   color: #fff;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .map {
@@ -1505,11 +1576,6 @@ template {
 }
 
 .footer__input {
-  background-color: #fff;
-  border-radius: 4px;
-  border: none;
-  padding: 0 23px;
-  height: 50px;
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1519,15 +1585,26 @@ template {
 .footer__message {
   width: 539px;
   height: 123px;
-  resize: none;
-  outline: none;
-  background-color: #fff;
-  border-radius: 4px;
-  padding: 18px 23px;
   border: none;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 23px;
+}
+
+.footer__message::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__message:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__message::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__message::placeholder {
+  color: #BDBDBD;
 }
 
 .footer__info {
@@ -1538,19 +1615,84 @@ template {
   line-height: 15px;
 }
 
-.footer__button {
-  min-width: 160px;
-  min-height: 50px;
-  padding: 18px;
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 143, 223, 0.39);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal__overlay--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  max-width: 478px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 33px 88px;
+  background-color: #0A223D;
+  color: #fff;
+  border-radius: 8px;
+  z-index: 111;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal__dialog--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__close {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__input {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.modal__message {
+  width: 100%;
+  min-height: 123px;
+  margin-top: 15px;
+}
+
+.modal__info {
+  color: #E0E0E0;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  background-color: #EC1F46;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+}
+
+.modal__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 @media (max-width: 1200px) {

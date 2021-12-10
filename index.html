@@ -209,7 +209,7 @@
                   <span class="booking__num">12100</span>
                 </a>
               </div>
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other Options</button>
             </div>
             <div class="map">
               <iframe
@@ -872,33 +872,82 @@
           </div>
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="post" class="footer__form">
+            <form action="send.php" method="post" class="footer__form form">
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Your Full Name"
                 name="name"
+                required
               />
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Phone Number"
                 name="phone"
+                required
               />
               <textarea
-                class="footer__message"
+                class="footer__message message"
                 placeholder="Message"
                 name="message"
+                required
+                minlength="10"
               ></textarea>
               <button class="button footer__button" type="submit">Send</button>
-              <div class="footer__info">* Required Fields</div>
+              <span class="footer__info">* Required Fields</span>
             </form>
           </div>
         </div>
       </div>
     </footer>
     <!-- /.footer -->
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="" class="modal__close">
+          <img src="img/close.svg" alt="Icon: close" />
+        </a>
+        <h3 class="modal__title modal__title--mb-3">Booking</h3>
+        <form action="send.php" method="post" class="modal__form form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name"
+            name="name"
+            required
+          />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Phone Number"
+            name="phone"
+            required
+          />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Email"
+            name="email"
+          />
+          <textarea
+            class="modal__message message"
+            placeholder="Message"
+            name="message"
+            required
+            minlength="10"
+          ></textarea>
+          <button class="button modal__button" type="submit">Send</button>
+          <spanspan class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js" ></script>
     <script src="js/main.js"></script>
   </body>
 </html>
